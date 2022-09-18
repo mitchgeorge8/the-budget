@@ -1,21 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="bg-zinc-800 text-white fixed bottom-0 w-full flex justify-around py-3">
-      <Link to="/budgets">
+    <nav className="bg-zinc-900 text-zinc-700 fixed bottom-0 w-full flex justify-around py-3">
+      <NavLink
+        to="/budgets"
+        className={({ isActive }) => (isActive ? "text-blue-600" : "")}
+      >
         <i className="fa-solid fa-scale-balanced fa-lg"></i>
-      </Link>
-      <Link to="/transactions">
+      </NavLink>
+      <NavLink
+        to="/transactions"
+        className={({ isActive }) => (isActive ? "text-blue-500" : "")}
+      >
         <i className="fa-solid fa-receipt fa-lg"></i>
-      </Link>
-      <Link to="/reports">
+      </NavLink>
+      <NavLink
+        to="/reports"
+        className={({ isActive }) => (isActive ? "text-blue-500" : "")}
+      >
         <i className="fa-solid fa-chart-simple fa-lg"></i>
-      </Link>
-      <Link to="/settings">
+      </NavLink>
+      <NavLink
+        to="/settings"
+        className={({ isActive }) => (isActive ? "text-blue-500" : "")}
+      >
         <i className="fa-solid fa-gear fa-lg"></i>
-      </Link>
+      </NavLink>
     </nav>
   );
 };
