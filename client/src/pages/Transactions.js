@@ -1,11 +1,13 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
-const Transactions = () => {
+export default function Transactions() {
   return (
-    <div>
-      <h1>Transactions</h1>
-    </div>
+    <>
+      <div>
+        <h1>Transactions</h1>
+      </div>
+      <Navbar />
+    </>
   );
-};
-
-export default Transactions;
+}

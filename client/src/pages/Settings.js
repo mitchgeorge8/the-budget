@@ -1,11 +1,13 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
-const Settings = () => {
+export default function Settings() {
   return (
-    <div>
-      <h1>Settings</h1>
-    </div>
+    <>
+      <div>
+        <h1>Settings</h1>
+      </div>
+      <Navbar />
+    </>
   );
-};
-
-export default Settings;
+}

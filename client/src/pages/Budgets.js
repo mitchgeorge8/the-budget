@@ -1,11 +1,13 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
-const Budgets = () => {
+export default function Budgets() {
   return (
-    <div>
-      <h1>Budgets</h1>
-    </div>
+    <>
+      <div>
+        <h1>Budgets</h1>
+      </div>
+      <Navbar />
+    </>
   );
-};
-
-export default Budgets;
+}

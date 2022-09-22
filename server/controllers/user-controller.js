@@ -27,9 +27,12 @@ const userController = {
 
       req.session.loggedIn = true;
       req.session.userId = user.id;
-      res.json({ message: "Login successful.", user: user });
+      res.json({ message: "You are now logged in." });
+      return;
     } catch (err) {
-      res.status(500).json(err);
+      console.log(err);
+      res.status(500);
+      return;
     }
   },
   logout(req, res) {
@@ -39,6 +42,7 @@ const userController = {
           res.status(400).json({ message: "Unable to log out." });
         }
         res.json({ message: "Logout successful." });
+        res.redirect("/login");
       });
     } else {
       res.status(404).end();
