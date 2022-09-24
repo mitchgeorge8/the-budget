@@ -1,4 +1,5 @@
 const { User } = require("../models");
+require("dotenv").config();
 
 const userController = {
   createUser: async (req, res) => {
@@ -41,16 +42,17 @@ const userController = {
         if (err) {
           res.status(400).json({ message: "Unable to log out." });
         }
-        res.json({ message: "Logout successful." });
-        res.redirect("/login");
+        res.clearCookie(process.env.SESS_NAME);
       });
+      return;
     } else {
-      res.status(404).end();
+      res.status(500);
+      return;
     }
   },
   getUser: async (req, res) => {
     if (!req.session.loggedIn) {
-      res.json({ message: "You must be logged in." });
+      res.sendStatus(403);
       return;
     }
     try {

@@ -9,10 +9,10 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 const sess = {
-  name: "the-budget",
-  secret: process.env.SESSION_SECRET,
+  name: process.env.SESS_NAME,
+  secret: process.env.SESS_SECRET,
   cookie: {
-    maxAge: Number(process.env.COOKIE_AGE),
+    maxAge: Number(process.env.SESS_AGE),
   },
   resave: false,
   saveUninitialized: false,

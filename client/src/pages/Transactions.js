@@ -5,7 +5,7 @@ export default function Transactions() {
   return (
     <>
       <div>
-        <h1>Transactions</h1>
+        <h1 className="text-center bg-zinc-50 text-lg p-1">Transactions</h1>
       </div>
       <Navbar />
     </>

@@ -5,7 +5,7 @@ export default function Reports() {
   return (
     <>
       <div>
-        <h1>Reports</h1>
+        <h1 className="text-center bg-zinc-50 text-lg p-1">Reports</h1>
       </div>
       <Navbar />
     </>

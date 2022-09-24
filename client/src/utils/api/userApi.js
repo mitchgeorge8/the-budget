@@ -8,6 +8,15 @@ export const login = (userData) => {
   });
 };
 
+export const logout = () => {
+  return fetch("/api/users/logout", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+};
+
 export const getUser = () => {
   return fetch("/api/users/user", {
     method: "GET",

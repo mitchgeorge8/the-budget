@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 #root {
-  @apply min-h-screen;
+  @apply h-screen text-zinc-800 bg-zinc-200;
 }

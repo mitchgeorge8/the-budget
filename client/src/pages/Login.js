@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
 import { login } from "../utils/api/userApi";
 
@@ -33,33 +33,40 @@ export default function Login() {
     });
   };
 
-  console.log(user);
-
   return (
     <>
       {user && <Navigate to="/budgets" replace={true} />}
-      <form onSubmit={handleFormSubmit}>
-        <h2>Login</h2>
-        <div>
-          <label htmlFor="email">Email</label>
+      <h1 className="text-center bg-zinc-50 text-lg p-1">The Budget</h1>
+      <form onSubmit={handleFormSubmit} className="m-6">
+        <div className="">
+          <label htmlFor="email" className="block">
+            Email
+          </label>
           <input
             type="text"
             id="email"
             name="email"
+            className="w-full rounded py-1 px-2 mb-2 bg-zinc-50"
             onChange={handleInputChange}
           />
           <br />
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password" className="block">
+            Password
+          </label>
           <input
             type="text"
             id="password"
             name="password"
+            className="w-full rounded py-1 px-2 mb-2 bg-zinc-50"
             onChange={handleInputChange}
           />
         </div>
-        <div>
-          <button type="submit">Login</button>
-        </div>
+        <button
+          type="submit"
+          className="mt-2 w-full bg-green-600 text-white rounded p-1"
+        >
+          Login
+        </button>
       </form>
     </>
   );
