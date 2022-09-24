@@ -3,6 +3,7 @@ const {
   createUser,
   login,
   logout,
+  getUser,
 } = require("../../controllers/user-controller");
 
 // /api/users
@@ -13,5 +14,8 @@ router.route("/login").post(login);
 
 // /api/users/logout
 router.route("/logout").post(logout);
+
+// /api/users/user
+router.route("/user").get(getUser);
 
 module.exports = router;

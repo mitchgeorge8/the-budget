@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
-import { login } from "../utils/api";
+import { login } from "../utils/api/userApi";
 
 export default function Login() {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });

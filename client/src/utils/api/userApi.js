@@ -7,3 +7,12 @@ export const login = (userData) => {
     body: JSON.stringify(userData),
   });
 };
+
+export const getUser = () => {
+  return fetch("/api/users/user", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+};
